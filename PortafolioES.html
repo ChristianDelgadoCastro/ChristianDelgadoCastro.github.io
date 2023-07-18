@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="estilo.css">
     <title>Christian Delgado - Desarrollador</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     <script type="text/javascript">
         (function () {
             emailjs.init('Djzz2D_dQjK9MDBrg');
@@ -235,7 +236,7 @@
     <section id="contacto">
         <h3 class="titulo-seccion">Contactame ahora</h3>
         <div class="contenedor-form">
-            <form id="contact-form">
+            <form id="contact-form" action="https://formspree.io/f/xqkvaepy" method="POST">
                 <div class="fila mitad">
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo *" class="input-mitad">
                     <input type="email" id="email" name="email" placeholder="Dirección de Email" class="input-mitad">
@@ -251,6 +252,44 @@
             </form>
         </div>
     </section>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: formData
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        mostrarAlerta('¡Mensaje enviado!', 'success', 'Gracias por contactarme. Te responderé pronto.');
+                        form.reset();
+                    } else {
+                        mostrarAlerta('Error', 'error', 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+                    }
+                })
+                .catch(function (error) {
+                    console.error('Error al enviar el mensaje:', error);
+                    mostrarAlerta('Error', 'error', 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+                });
+        });
+
+        function mostrarAlerta(titulo, icono, mensaje) {
+            Swal.fire({
+                icon: icono,
+                title: titulo,
+                text: mensaje,
+                confirmButtonText: 'Aceptar'
+            });
+        }
+    </script>
 
     <div id="idioma-icono">
         <i class="fas fa-globe"></i>

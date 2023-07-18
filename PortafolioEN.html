@@ -237,22 +237,60 @@
     <section id="contacto">
         <h3 class="titulo-seccion">Contact me now!</h3>
         <div class="contenedor-form">
-            <form id="contact-formEN">
+            <form id="contact-form" action="https://formspree.io/f/xqkvaepy" method="POST">
                 <div class="fila mitad">
-                    <input type="text" id="nombreEN" name="nombre" placeholder="Full Name *" class="input-mitad">
-                    <input type="email" id="emailEN" name="email" placeholder="Email address" class="input-mitad">
+                    <input type="text" id="nombre" name="nombre" placeholder="Full Name *" class="input-mitad">
+                    <input type="email" id="email" name="email" placeholder="Email Address" class="input-mitad">
                 </div>
                 <div class="fila">
-                    <input type="text" id="temaEN" name="tema" placeholder="Topic..." class="input-full">
+                    <input type="text" id="tema" name="tema" placeholder="Topic..." class="input-full">
                 </div>
                 <div class="fila">
-                    <textarea id="mensajeEN" name="mensaje" cols="30" rows="10" placeholder="Your Message..."
+                    <textarea id="mensaje" name="mensaje" cols="30" rows="10" placeholder="Your Message..."
                         class="input-full"></textarea>
                 </div>
                 <input type="submit" value="Send Message" class="btn-enviar">
             </form>
         </div>
     </section>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: formData
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        mostrarAlerta('¡Mensaje enviado!', 'success', 'Gracias por contactarme. Te responderé pronto.');
+                        form.reset();
+                    } else {
+                        mostrarAlerta('Error', 'error', 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+                    }
+                })
+                .catch(function (error) {
+                    console.error('Error al enviar el mensaje:', error);
+                    mostrarAlerta('Error', 'error', 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+                });
+        });
+
+        function mostrarAlerta(titulo, icono, mensaje) {
+            Swal.fire({
+                icon: icono,
+                title: titulo,
+                text: mensaje,
+                confirmButtonText: 'Aceptar'
+            });
+        }
+    </script>
 
     <div id="idioma-icono">
         <i class="fas fa-globe"></i>
