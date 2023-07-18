@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>Christian Delgado - Developer</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('Djzz2D_dQjK9MDBrg');
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- SECCIÓN I N I C I O -->
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1 id="frase-cambiante">.</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado">HOME</a></li>
+                            <li><a href="#sobremi">ABOUT ME</a></li>
+                            <li><a href="#servicios">SERVICES</a></li>
+                            <li><a href="#portfolio">PORTFOLIO</a></li>
+                            <li><a href="#contacto">CONTACT</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Icono del menu responsive -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+
+                    <div class="redes">
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida">Welcome</p>
+                <h2>I´m <span>Christian Delgado Castro</span>, Developer</h2>
+                <p class="descripcion">Hi! I'm a passionate developer with experience in creating web, 
+                    desktop and mobile applications. web, desktop and mobile applications. 
+                    My focus is on developing intuitive and functional solutions and functional solutions, 
+                    providing exceptional user experiences. I am constantly updating myself on the latest 
+                    technologies and looking for new ways to innovate in my projects. Explore my portfolio 
+                    to see some of my portfolio to see some of my outstanding work!</p>
+                <a href="#portfolio">Go to Portafolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN S O B R E M I -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="img/foto.jpg" alt="">
+        </div>
+        <div class="sobremi">
+            <p class="titulo-seccion">About me</p>
+            <h2>Hi, I am <span>Christian Delgado Castro</span> </h2>
+            <h3>Application Developer</h3>
+            <p>I'm a University Technician in Multiplatform Software Development graduated from the 
+                Technological University of Leon. from the Technological University of Leon, 
+                I have a vast experience in the development of web applications, mobile applications 
+                and desktop applications.</p>
+            <p>I invite you to check my GitHub portfolio where you can find some projects I have done
+            </p>
+            <p>You can also check my curriculum here.
+            </p>
+            <a href="curriculum/CurriculumVitae.pdf" target="_blank">Download CV</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN S E R V I C I O S -->
+    <section id="servicios">
+        <h3 class="titulo-seccion">MY SERVICES</h3>
+        <div class="fila">
+            <div class="servicio">
+                <span class="icono"> <i class="fa-solid fa-code"></i></span>
+                <h4>Web Site Design</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>FrontEnd</li>
+                    <li>BackEnd</li>
+                </ul>
+                <p>I am constantly learning and practicing technologies such as React and Spring.</p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-code"></i></span>
+                <h4>Java Programming</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>POO</li>
+                    <li>Desktop Apps</li>
+                    <li>Mobile Apps</li>
+                </ul>
+                <p>Java is my main programming language; I have been using it as a backend to create
+                    websites, mobile applications and desktop applications.
+                </p>
+            </div>
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-database"></i></span>
+                <h4>Databases</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>MySQL</li>
+                    <li>SQL Server</li>
+                    <li>MongoDB</li>
+                </ul>
+                <p>I have done projects that connect to databases such as MySQL, SQLServer, 
+                    MongoDB and cloud services such as CleverCloud.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN H A B I L I D A D E S -->
+    <div class="contenedor-skills" id="skills">
+        <h3>SKILLS </h3>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Html & Css</p>
+                <span class="porcentaje">95%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="html"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Javascript</p>
+                <span class="porcentaje">80%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="js"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Bases de Datos</p>
+                <span class="porcentaje">90%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="bd"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>Java</p>
+                <span class="porcentaje">95%</span>
+            </div>
+
+            <div class="barra">
+                <div class="" id="java"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN PORTAFOLIO -->
+    <section id="portfolio">
+        <h3 class="titulo-seccion">My Projects</h3>
+        <div class="fila">
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/app1.PNG" alt="">
+                <div class="info">
+                    <h4>Grades, subjects, groups and students manager for a school</h4>
+                    <p>DESKTOP APPLICATION</p>
+                    <a href="https://github.com/ChristianDelgadoCastro/gestorEscuela" target="_blank"
+                        class="github-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/app2.png" alt="">
+                <div class="info">
+                    <h4>Website for the Veterinary "Santa Maria", for employees and customers.</h4>
+                    <p>WEB APPLICATION</p>
+                    <a href="enlace-a-github" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/app3.png" alt="">
+                <div class="info">
+                    <h4>My Spa" website with mobile application for employees and clients.</h4>
+                    <p>WEB APPLICATION</p>
+                    <a href="enlace-a-github" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/app4.png" alt="">
+                <div class="info">
+                    <h4>Page "Lions Center Gym", for employees and clients.</h4>
+                    <p>WEB APPLICATION</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/app5.png" alt="">
+                <div class="info">
+                    <h4>"OptiQualite" page, for employees and customers.</h4>
+                    <p>WEB APPLICATION</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/app6.png" alt="">
+                <div class="info">
+                    <h4>Simple static page made with html, css, bootstrap and sweetAlert</h4>
+                    <p>Web Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCTION C O N T A C T O -->
+    <section id="contacto">
+        <h3 class="titulo-seccion">Contact me now!</h3>
+        <div class="contenedor-form">
+            <form id="contact-formEN">
+                <div class="fila mitad">
+                    <input type="text" id="nombreEN" name="nombre" placeholder="Nombre Completo *" class="input-mitad">
+                    <input type="email" id="emailEN" name="email" placeholder="Dirección de Email" class="input-mitad">
+                </div>
+                <div class="fila">
+                    <input type="text" id="temaEN" name="tema" placeholder="Tema..." class="input-full">
+                </div>
+                <div class="fila">
+                    <textarea id="mensajeEN" name="mensaje" cols="30" rows="10" placeholder="Tu Mensaje..."
+                        class="input-full"></textarea>
+                </div>
+                <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+            </form>
+        </div>
+    </section>
+
+    <div id="idioma-icono">
+        <i class="fas fa-globe"></i>
+    </div>
+
+    <div id="menu-idiomas" class="menu-idiomas">
+        <ul>
+            <li><a href="PortafolioES.html" data-idioma="es"><img src="img/mxn.png" alt="Español"> Español</a></li>
+            <li><a href="PortafolioEN.html" data-idioma="en"><img src="img/eu.png" alt="English"> English</a></li>
+        </ul>
+    </div>
+
+    <!-- SECCIÓN FOOTER -->
+    <footer>
+        <p>All rights reserved - 2023</p>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
